@@ -1,0 +1,1 @@
+export { default as EmpApi} from './employeeMaster'

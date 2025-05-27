@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.cuttedBorder1 {
+  border-image: linear-gradient(#1F588B 30%, transparent 0 70%, #1F588B 0) 2;
+  background-color: #3fd6ca;
+}
+
+.cuttedBorder2 {
+  border-image: linear-gradient(#62AAA3 30%, transparent 0 70%, #62AAA3 0) 2;
+}
+
+.cuttedBorder3 {
+  border-image: linear-gradient(#96A669 30%, transparent 0 70%, #96A669 0) 2;
+}
+
+.cuttedBorder4 {
+  border-image: linear-gradient(#D49B37 30%, transparent 0 70%, #D49B37 0) 2;
+}
+
+.cuttedBorder5 {
+  border-image: linear-gradient(#af3f0b 30%, transparent 0 70%, #af3f0b 0) 2;
+}
+
+html,
+body,
+#root,
+.app,
+.content {
+  height: 100%;
+  width: 100%;
+  font-family: "Outfit", sans-serif;
+
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Scrollbar */
+/* Firefox */
+* {
+  scrollbar-width: 1px;
+  scrollbar-color: #9e9fac #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+/* For WebKit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  /* color of the scrollbar handle */
+}
+
+/* For Firefox */
+/* Set the width of the scrollbar */
+/* auto: browser default, thin, or none: hides the scrollbar */
+/* For Firefox, you can't style the scrollbar directly like in WebKit */
+/* But you can adjust its appearance using the color of the track and handle */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* thumb color and track color */
+}
+
+
+.toggle-button-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50%;
+  /* Ensure it's above other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  /* Adjust height as needed */
+  background-color: #333;
+  /* Adjust background color as needed */
+  color: #fff;
+  /* Adjust text color as needed */
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.toggle-button-wrapper:hover {
+  background-color: #555;
+  /* Adjust hover background color as needed */
+}
+
+/* Adjust the width of the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  /* Change this value to set the width */
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Change the background color if needed */
+}
+
+/* Style the scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background: #802525;
+  /* Change the color of the scrollbar handle */
+  border-radius: 5px;
+  /* Add border-radius for rounded corners */
+}
+
+/* Hover effect for the scrollbar handle */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  /* Change the color on hover */
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+
+
+
+
+
+.font-normal {
+  font-weight: larger;
+}
+
+body {
+  font-size: 0.5vw;
+}
+
+
+.header-font {
+  font-size: 1.7vw;
+}
+
+.title {
+  font-size: 1.1vw;
+}
+
+.subheading-font {
+  font-size: 0.9vw;
+}
+
+.content-font {
+  font-size: 0.8vw;
+}
+
+
+
+.quarterly-review-header {
+  font-weight: bold;
+}
+
+.even {
+  background-color: #cccbcb;
+}
+
+.odd {
+  background-color: white;
+}
+
+.button-clr {
+  background-color: 'white';
+}
+
+.tab-color {
+  background-color: #242424;
+  color: rgb(255, 255, 255);
+
+}
+
+.side-bar {
+  background-color: #1F2937;
+}
+
+.top-Bar {
+  background-color: #303030;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+.top {
+  color: #00072e;
+}
+
+.color {
+  background-color: #adadad;
+}
+
+.top-Bar-style {
+  background-color: #303030;
+
+}
+
+
+
+
+.custom-data-grid .MuiDataGrid-cell {
+
+  color: rgb(0, 0, 0);
+
+
+}
+
+.select-clr {
+  background-color: #C27803;
+}
+
+.total-width {
+  width: 50%;
+}
+
+@media screen and (min-width: 700px) {
+  .total-width {
+    width: 60%;
+
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .total-width {
+    width: 70%;
+
+
+
+  }
+
+  .total-head {
+    width: 38%;
+
+  }
+}
+
+.canvasjs-chart-credit {
+  display: none;
+}
+
+.element.style {
+  display: none;
+}
+
+
+.canvasjs-chart-pie .canvasjs-chart-pie-inner {
+  fill: #f6ad55;
+  /* Change the color as needed */
+}
+
+.css-1jkp6p1-MuiTableCell-root {
+  font-weight: 600;
+  color: red;
+}
+
+.css-t89xny-MuiDataGrid-columnHeaderTitle {
+
+  font-weight: 900;
+}
+
+.clr {
+  color: #dcdaf0;
+}
+
+.am5-layer-30 {
+
+  display: none;
+}
+
+/* .dx-export-menu-button {
+  display: none;
+} */
+
+.lable {
+  font-size: 20px;
+}
+
+/* MyFunnel.css */
+
+.my-funnel-wrapper .dx-export-menu {
+  margin-top: 20rem;
+
+}
+
+.MuiI-focused {
+  outline: none;
+  display: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.custom-table-cell {
+  font-size: 10px;
+  text-align: right;
+}
+
+.custom-header-row {
+  text-align: left;
+  /* Align headers (e.g., "Customer") to the left */
+}
+
+.custom-table-cell:not(:first-child) {
+
+  width: 200px;
+}
+
+.custom-table-cell:nth-child(2) {
+  text-align: left;
+  width: 200px;
+}
+
+.total-row {
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+  z-index: 1000;
+}
+
+.highcharts-credits {
+  display: none;
+}
+
+.fontWeightBold {
+  font-weight: bold;
+}
+
+.dropdown-panel-black {
+  background-color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  width: 1rem;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.oddRow {
+  background-color: #f5f5f5;
+
+}
+
+.evenRow {
+  background-color: #ffffff;
+
+}
