@@ -5,8 +5,7 @@ import { dirname } from 'path';
 
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
-const oracledb = require('oracledb');
-oracledb.initOracleClient({ libDir: "C:\\oracle\\instantclient_19_20" }); 
+
 
 import {
  emp
@@ -35,7 +34,7 @@ BigInt.prototype['toJSON'] = function () {
 app.use('/emp', emp)
 
 
-const PORT = 8000;
+const PORT = 9047;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);

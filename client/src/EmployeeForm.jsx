@@ -324,7 +324,6 @@ const EmployeeForm = () => {
                   type="select"
                   options={[
                     { value: 'India', label: 'India' },
-                    { value: 'Other', label: 'Other' }
                   ]}
                   compact
                 />

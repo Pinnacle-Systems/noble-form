@@ -58,7 +58,8 @@ export async function create(req, res) {
                     EMAIL = :email,
                     PANNO = :pan,
                     CADD =  : streetAddress,
-                    PINCODE = :postalCode
+                    PINCODE = :postalCode,
+                    ACTIVE= : true
                 WHERE PHNO = :phone AND DOCID = :employeeId
             `;
 
