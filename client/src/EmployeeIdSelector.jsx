@@ -11,7 +11,7 @@ const EmployeeIdSelector = ({ employeeId, employees, onChange, className }) => {
     >
       <option value="">Select Employee ID</option>
        {employees
-    .filter((employee) => employee.ACTIVE == 0)
+    .filter((employee) => employee.ACTIVE !== 1)
     .map((employee) => (
       <option key={employee.DOCID} value={employee.DOCID}>
         {employee.DOCID}
