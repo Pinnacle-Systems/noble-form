@@ -10,11 +10,13 @@ const EmployeeIdSelector = ({ employeeId, employees, onChange, className }) => {
       className={`px-4 py-2 border border-indigo-300 rounded-lg text-white focus:outline-none  focus:ring-2 focus:ring-indigo-400 ${className}`}
     >
       <option value="">Select Employee ID</option>
-      {employees.map((employee) => (
-        <option key={employee.DOCID} value={employee.DOCID}>
-          {employee.DOCID}
-        </option>
-      ))}
+       {employees
+    .filter((employee) => employee.ACTIVE == 0)
+    .map((employee) => (
+      <option key={employee.DOCID} value={employee.DOCID}>
+        {employee.DOCID}
+      </option>
+    ))}
     </select>
   );
 };
