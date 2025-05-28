@@ -11,6 +11,7 @@ import { useGetEmpQuery, useCreateEmpMutation } from './redux/service/employeeMa
 import EmployeeIdSelector from './EmployeeIdSelector';
 import FormField from './FormField';
 import Swal from 'sweetalert2';
+import { stateCityData } from './StateCityArray';
 
 
 const EmployeeForm = () => {
@@ -19,6 +20,7 @@ const EmployeeForm = () => {
     handleSubmit,
     formState: { errors, isValid, isSubmitting },
     reset,
+    watch,
     setValue
   } = useForm({
     mode: 'onChange',
@@ -34,11 +36,14 @@ const EmployeeForm = () => {
       phone: '',
       streetAddress: '',
       city: '',
+
       state: '',
       postalCode: '',
       country: '',
     }
   });
+const selectedState = watch('state');
+const cities = stateCityData[selectedState] || [];
 
   const [employeeId, setEmployeeId] = useState('');
   const [searchPhone, setSearchPhone] = useState('');
@@ -77,7 +82,6 @@ const EmployeeForm = () => {
       });
     }
   };
-
 
   const handlePhoneSearch = (value) => {
     const cleanedValue = value.replace(/\D/g, '').slice(0, 10);
@@ -287,24 +291,37 @@ const EmployeeForm = () => {
                   name="streetAddress"
                   compact
                 />
+          <FormField
+  control={control}
+  errors={errors}
+  icon={FaBuilding}
+  label="State/Province"
+  name="state"
+  type="select"
+  required
+  options={Object.keys(stateCityData).map(state => ({
+    value: state,
+    label: state,
+  }))}
+/>
 
-                <FormField
-                  control={control}
-                  errors={errors}
-                  icon={FaCity}
-                  label="City"
-                  name="city"
-                  compact
-                />
 
-                <FormField
-                  control={control}
-                  errors={errors}
-                  icon={FaBuilding}
-                  label="State/Province"
-                  name="state"
-                  compact
-                />
+     <FormField
+  control={control}
+  errors={errors}
+  icon={FaCity}
+  label="City"
+  name="city"
+  type="select"
+  required
+  options={cities.map(city => ({
+    value: city,
+    label: city,
+  }))}
+/>
+
+
+               
 
                 <FormField
                   control={control}

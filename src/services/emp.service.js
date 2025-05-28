@@ -1,7 +1,6 @@
-import bcrypt from "bcrypt"
 import { getConnection } from "../constants/db.connection.js";
 
-import oracledb from 'oracledb';
+
 
 export async function create(req, res) {
     let connection;
@@ -25,6 +24,7 @@ export async function create(req, res) {
             state,
             fatherName
         } = req.body;
+        const active =1
 
         if (!phone || !employeeId) {
             return res.json({ statusCode: 1, message: 'Phone and Employee ID are required' });
@@ -59,7 +59,7 @@ export async function create(req, res) {
                     PANNO = :pan,
                     CADD =  : streetAddress,
                     PINCODE = :postalCode,
-                    ACTIVE= : true
+                    ACTIVE= : active
                 WHERE PHNO = :phone AND DOCID = :employeeId
             `;
 
@@ -74,6 +74,7 @@ export async function create(req, res) {
                 marriedStatus,
                 state,
                 email,
+                active,
                 pan,
                 postalCode,
                 streetAddress,
